@@ -791,22 +791,22 @@ def main():
     # Options
     usage = '%prog [options]'
     o = optparse.OptionParser(usage=usage)
-    o.add_option('--targetdate',
+    o.add_option('--targetdate', '-t',
                  help=('Optional: Date to parse. Example: 2017-01-15.'))
-    o.add_option('--logpath',
+    o.add_option('--logpath', '-l',
                  help=('Optional: Caching Log Path. Defaults to: '
                        '/Library/Server/Caching/Logs'))
-    o.add_option('--deviceids',
+    o.add_option('--deviceids', '-d',
                  help='Optional: Use Device IDs (Ex: iPhone7,2). Defaults'
                  ' to: False',
                  action='store_true')
-    o.add_option('--nostdout',
+    o.add_option('--nostdout', '-n',
                  help='Optional: Do not print to standard out',
                  action='store_true')
-    o.add_option('--configureserver',
+    o.add_option('--configureserver', '-c',
                  help='Optional: Configure Server to log Client Data',
                  action='store_true')
-    o.add_option('--serveralert',
+    o.add_option('--serveralert', '-s',
                  help='Optional: Send Server Alert',
                  action='store_true')
     o.add_option("--slackalert", action="store_true", default=False,
@@ -814,8 +814,8 @@ def main():
     o.add_option("--slackwebhook", default=None,
                  help=("Optional: Slack Webhook URL. Requires Slack Option."))
     o.add_option("--slackusername", default=None,
-                 help=("Optional: Slack username. Defaults to Cacher."
-                       "Requires Slack Option."))
+                 help=("Optional: Slack username. Defaults to Cacher. " 
+                 "Requires Slack Option."))
     o.add_option("--slackchannel", default=None,
                  help=("Optional: Slack channel. Can be username or channel "
                        "Ex. #channel or @username. Requires Slack Option."))
